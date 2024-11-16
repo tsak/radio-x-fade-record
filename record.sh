@@ -19,6 +19,6 @@ ffmpeg -loglevel warning \
   -c copy \
   -metadata artist="DJ Mixes" \
   -metadata album="Radio X" \
-  -metadata title="$TITLE" \
+  -metadata title="$ISODATE $TITLE" \
   -metadata date="$ISODATE" \
   "$FILENAME" 2> record_errors.log
