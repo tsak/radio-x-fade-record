@@ -22,3 +22,6 @@ ffmpeg -loglevel warning \
   -metadata title="$ISODATE $TITLE" \
   -metadata date="$ISODATE" \
   "$FILENAME" 2> record_errors.log
+
+./trim.sh "$FILENAME" 00:05:15
+./trim.sh "$FILENAME" 00:10:15
