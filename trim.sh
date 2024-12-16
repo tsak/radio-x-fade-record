@@ -15,8 +15,8 @@ INFILE="$1"
 # Add `_trimmed` before extension in resulting filename
 BASENAME="${INFILE%.*}"
 EXT="${INFILE##*.}"
-OUTFILE="${BASENAME}_trimmed.${EXT}"
 TRIM_AMOUNT="$2"
+OUTFILE="${BASENAME}_trimmed_${TRIM_AMOUNT//:/-}.${EXT}"
 
 ffmpeg -loglevel error \
   -ss "$TRIM_AMOUNT" \
